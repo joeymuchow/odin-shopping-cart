@@ -1,0 +1,20 @@
+.firstHero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.secondHero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.heroListContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list {
+  margin: 0;
+}
