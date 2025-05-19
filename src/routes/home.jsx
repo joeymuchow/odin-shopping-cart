@@ -3,7 +3,7 @@ import styles from "../styles/home.module.css";
 function Home() {
 
   return (
-    <main>
+    <main className={styles.main}>
       <div className={styles.firstHero}>
         <p>Some kinda shopping image here</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ullam beatae obcaecati consequatur provident deleniti dignissimos libero asperiores neque repellat, commodi vitae amet ea et aut vero quam! Adipisci, modi.</p>

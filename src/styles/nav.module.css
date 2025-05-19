@@ -1,0 +1,12 @@
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav a {
+  font-size: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 6px;
+  align-items: center;
+}

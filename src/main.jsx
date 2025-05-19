@@ -5,6 +5,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './routes/app';
 import Home from './routes/home';
 
+// TODO:
+// shop page
+// cart page
+// get shopping items from https://fakestoreapi.com/
+// state for tracking cart
+// add and remove items from cart
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -12,6 +19,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "home", element: <Home /> },
+      { path: "shop", element: <></> }
     ],
   },
 ]);

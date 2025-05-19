@@ -1,3 +1,10 @@
+.main {
+  max-width: 1200px;
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+}
+
 .firstHero {
   display: flex;
   flex-direction: column;
