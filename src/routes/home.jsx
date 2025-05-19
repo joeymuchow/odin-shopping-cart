@@ -1,14 +1,16 @@
 import styles from "../styles/home.module.css";
+import shopHero from "../assets/shop-hero.jpg";
+import shopOnline from "../assets/shop-online.jpg";
 
 function Home() {
 
   return (
     <main className={styles.main}>
       <div className={styles.firstHero}>
-        <p>Some kinda shopping image here</p>
+        <img src={shopHero} alt="A small shop with items for sale on the walls." />
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ullam beatae obcaecati consequatur provident deleniti dignissimos libero asperiores neque repellat, commodi vitae amet ea et aut vero quam! Adipisci, modi.</p>
       </div>
-      <hr />
+      <hr className={styles.hr} />
       <div className={styles.secondHero}>
         <div className={styles.heroListContainer}>
           <h3>Shopping made easy</h3>
@@ -18,7 +20,9 @@ function Home() {
             <li>Low prices</li>
           </ul>
         </div>
-        <div>Image here</div>
+        <div className={styles.imgContainer}>
+          <img src={shopOnline} alt="Someone shopping online with their phone." />
+        </div>
       </div>
     </main>
   )

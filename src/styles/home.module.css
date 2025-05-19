@@ -11,15 +11,33 @@
   align-items: center;
 }
 
+.firstHero img {
+  width: 50%;
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+}
+
+.hr {
+  margin: 25px 0;
+}
+
 .secondHero {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.secondHero img {
+  width: 100%;
 }
 
 .heroListContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .list {
