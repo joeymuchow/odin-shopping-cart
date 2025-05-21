@@ -1,15 +1,24 @@
 import { useOutletContext } from "react-router-dom";
+import Product from "../components/Product";
+import styles from "../styles/shop.module.css";
 
 function Shop() {
   const { products } = useOutletContext();
 
-  // create an item component that shows the info about a specific product and handles adding to cart
-
   return (
-    <main>
+    <main className={styles.products}>
       {products &&
         products.map((value) => {
-          return <div key={value.id}>{value.title}</div>;
+          return (
+            <Product
+              key={value.id}
+              id={value.id}
+              title={value.title}
+              description={value.description}
+              image={value.image}
+              price={value.price}
+            />
+          );
         })}
     </main>
   );

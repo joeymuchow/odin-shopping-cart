@@ -1,0 +1,43 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityContainer {
+  display: flex;
+  max-width: 100%;
+  gap: 5px;
+}
+
+.quantityContainer button {
+  background-color: hsl(180, 25%, 25%);
+  color: white;
+}
+
+.quantityContainer button:hover {
+  background-color: hsl(180, 25%, 35%);;
+}
+
+.quantityContainer input {
+  min-width: 0;
+  text-align: center;
+}
+
+.image {
+  height: 150px;
+}
+
+.title, .price {
+  flex: 1;
+}
+
+.addToCart {
+  background-color: hsl(220, 5%, 88%);
+  color: #000;
+}
+
+.addToCart:hover {
+  background-color: hsl(220, 5%, 78%);
+}
