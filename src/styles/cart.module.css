@@ -1,0 +1,37 @@
+.container {
+  width: 100%;
+}
+
+.itemContainer {
+  display: flex;
+  align-items: center;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-areas: "title title"
+  "price quantity"
+  "subtotal subtotal";
+  flex: 1;
+}
+
+.title {
+  grid-area: title;
+}
+
+.price {
+  grid-area: price;
+}
+
+.quantity {
+  grid-area: quantity;
+}
+
+.subtotal {
+  grid-area: subtotal;
+}
+
+.btnContainer {
+  text-align: right;
+  justify-self: right;
+}

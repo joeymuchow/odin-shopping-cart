@@ -3,7 +3,7 @@ import Product from "../components/Product";
 import styles from "../styles/shop.module.css";
 
 function Shop() {
-  const { products } = useOutletContext();
+  const { products, setCart } = useOutletContext();
 
   return (
     <main className={styles.products}>
@@ -17,6 +17,7 @@ function Shop() {
               description={value.description}
               image={value.image}
               price={value.price}
+              setCart={setCart}
             />
           );
         })}

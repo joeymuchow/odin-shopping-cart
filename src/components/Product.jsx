@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../styles/product.module.css";
 
-function Product({ id, title, image, price, description }) {
+function Product({ id, title, image, price, description, setCart }) {
   const [quantity, setQuantity] = useState(1);
   const formattedPrice = price.toFixed(2);
 
@@ -13,10 +13,6 @@ function Product({ id, title, image, price, description }) {
       <label htmlFor={`product-${id}`}>Quantity</label>
       <div className={styles.quantityContainer}>
         <button onClick={() => {
-          setQuantity(quantity => quantity + 1);
-        }}>+</button>
-        <input type="number" id={`product-${id}`} value={quantity} onChange={(e) => setQuantity(Number(e.target.value))} />
-        <button onClick={() => {
           setQuantity(quantity => {
             if (quantity === 0) {
               return 0;
@@ -25,8 +21,24 @@ function Product({ id, title, image, price, description }) {
             }
           });
         }}>-</button>
+        <input type="number" id={`product-${id}`} value={quantity} onChange={(e) => setQuantity(Number(e.target.value))} />
+        <button onClick={() => {
+          setQuantity(quantity => quantity + 1);
+        }}>+</button>
       </div>
-      <button className={styles.addToCart}>Add to cart</button>
+      <button className={styles.addToCart} onClick={() => {
+        setCart(cart => {
+          return [
+            ...cart,
+            {
+              id,
+              title,
+              price,
+              quantity,
+            },
+          ];
+        });
+      }}>Add to cart</button>
     </div>
   )
 }

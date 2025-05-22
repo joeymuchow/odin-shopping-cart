@@ -7,6 +7,7 @@ function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -28,7 +29,7 @@ function App() {
         <Nav />
       </header>
       {loading && <p>Loading...</p>}
-      {!loading && <Outlet context={{ products: data }} />}
+      {!loading && <Outlet context={{ products: data, cart, setCart }} />}
       {error && <p>{error}</p>}
       <footer className={styles.footer}>
         Icons by{" "}
