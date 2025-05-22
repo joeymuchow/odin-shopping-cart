@@ -7,6 +7,7 @@ import Home from "./routes/home";
 import Shop from "./routes/shop";
 import ErrorPage from "./routes/errorPage";
 import Cart from "./routes/cart";
+import Purchased from "./routes/purchased";
 
 // TODO:
 // shop page
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "home", element: <Home /> },
       { path: "shop", element: <Shop /> },
       { path: "cart", element: <Cart /> },
+      { path: "purchased", element: <Purchased /> }
     ],
   },
 ]);

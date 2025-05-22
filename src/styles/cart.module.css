@@ -1,3 +1,10 @@
+.main {
+  max-width: 1200px;
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+}
+
 .container {
   width: 100%;
 }
@@ -34,4 +41,24 @@
 .btnContainer {
   text-align: right;
   justify-self: right;
+}
+
+.purchase, .remove {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-color: hsl(220, 5%, 88%);
+  transition: background-color 0.25s;
+  color: #222;
+}
+
+.purchase:hover, .remove:hover {
+  background-color: hsl(220, 5%, 78%);
+  color: #222;
+}
+
+.purchase:active, .remove:active {
+  background-color: hsl(220, 5%, 78%);
+  color: #222;
+  border: 2px solid #222;
 }

@@ -13,6 +13,7 @@
 
 .quantityContainer button {
   background-color: hsl(180, 25%, 25%);
+  transition: background-color 0.25s;
   color: white;
 }
 
@@ -35,9 +36,14 @@
 
 .addToCart {
   background-color: hsl(220, 5%, 88%);
+  transition: background-color 0.25s;
   color: #000;
 }
 
 .addToCart:hover {
   background-color: hsl(220, 5%, 78%);
+}
+
+.addToCart:active {
+  background-color: hsl(220, 5%, 68%);
 }

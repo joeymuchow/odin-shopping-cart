@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import styles from "../styles/cart.module.css";
 
 function Cart() {
@@ -6,7 +6,7 @@ function Cart() {
   const total = calculateTotal(cart);
 
   return (
-    <main>
+    <main className={styles.main}>
       <h3>Your cart</h3>
       {(!cart || cart.length < 1) && <p>Your cart is empty.</p>}
       <div className={styles.container}>
@@ -23,6 +23,7 @@ function Cart() {
                   </div>
                   <div className={styles.btnContainer}>
                     <button
+                    className={styles.remove}
                       onClick={(e) => {
                         e.preventDefault();
                         setCart((cart) => {
@@ -42,6 +43,7 @@ function Cart() {
           })}
       </div>
       <p>Total: ${total.toFixed(2)}</p>
+      <Link to="/purchased" className={styles.purchase} onClick={() => setCart([])}>Pay</Link>
     </main>
   );
 }
