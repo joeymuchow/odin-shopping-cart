@@ -13,8 +13,8 @@ function Cart() {
         {cart &&
           cart.map((value) => {
             return (
-              <>
-                <div key={value.id} className={styles.itemContainer}>
+              <div key={value.id} >
+                <div className={styles.itemContainer}>
                   <div className={styles.cartItem}>
                     <p className={styles.title}>{value.title}</p>
                     <p className={styles.price}>Price: ${value.price.toFixed(2)}</p>
@@ -23,7 +23,7 @@ function Cart() {
                   </div>
                   <div className={styles.btnContainer}>
                     <button
-                    className={styles.remove}
+                      className={styles.remove}
                       onClick={(e) => {
                         e.preventDefault();
                         setCart((cart) => {
@@ -38,7 +38,7 @@ function Cart() {
                   </div>
                 </div>
                 <hr />
-              </>
+              </div>
             );
           })}
       </div>
