@@ -26,7 +26,7 @@ function App() {
     <div className={styles.appContainer}>
       <header className={styles.header}>
         <h1 className={styles.title}>The Shopping Cart</h1>
-        <Nav />
+        <Nav cart={cart} />
       </header>
       {loading && <p>Loading...</p>}
       {!loading && <Outlet context={{ products: data, cart, setCart }} />}
