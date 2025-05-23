@@ -1,9 +1,10 @@
 import { Link, useOutletContext } from "react-router-dom";
 import styles from "../styles/cart.module.css";
+import { calculateCartTotal } from "../utilities/calculate";
 
 function Cart() {
   const { cart, setCart } = useOutletContext();
-  const total = calculateTotal(cart);
+  const total = calculateCartTotal(cart);
 
   return (
     <main className={styles.main}>
@@ -46,18 +47,6 @@ function Cart() {
       <Link to="/purchased" className={styles.purchase} onClick={() => setCart([])}>Pay</Link>
     </main>
   );
-}
-
-function calculateTotal(cart) {
-  let total = 0;
-
-  if (cart) {
-    for (const item of cart) {
-      total += item.price * item.quantity;
-    }
-  }
-
-  return total;
 }
 
 export default Cart;
