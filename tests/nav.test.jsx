@@ -12,4 +12,18 @@ describe("Nav component", () => {
     expect(links[1].textContent).toMatch(/Shop/i);
     expect(links[2].textContent).toMatch(/Cart/i);
   });
+
+  it("shows no parentheses next to 'Cart' when the cart is empty", () => {
+    render(<Nav cart={[]} />, {wrapper: BrowserRouter});
+    const links = screen.getAllByRole("link");
+
+    expect(links[2]).toHaveTextContent("Cart");
+  });
+
+  it("shows number of items in cart in parentheses next to 'Cart'", () => {
+    render(<Nav cart={[{id: 1}, {id: 2}]} />, {wrapper: BrowserRouter});
+    const links = screen.getAllByRole("link");
+
+    expect(links[2]).toHaveTextContent("Cart (2)");
+  });
 });
